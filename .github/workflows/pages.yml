@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: mkdir site && cp index.html site/
+      - run: mkdir site && cp index.html site/ && cp -r capas site/ && rm -rf site/capas/originais
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
